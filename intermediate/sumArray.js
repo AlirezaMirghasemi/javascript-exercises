@@ -11,5 +11,8 @@
  */
 
 // Write your solution here
+let sumArray=(arr)=>{
 
+    return  arr.reduce((sum, cell) => sum + cell, 0);
+}
 module.exports = sumArray;

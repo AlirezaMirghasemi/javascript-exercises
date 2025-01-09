@@ -11,5 +11,7 @@
  */
 
 // Write your solution here
-
+let charCount = (str, count) => {
+   return [...str].filter((char)=>char===count).length;
+};
 module.exports = charCount;

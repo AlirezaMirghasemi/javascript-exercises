@@ -12,4 +12,18 @@
 
 // Write your solution here
 
+// function celsiusToFahrenheit(degree) {
+
+//   degree =(Number(degree) * 1.8) + 32;
+//   return(degree);
+// }
+
+celsiusToFahrenheit=(degree)=>{
+    degree =(Number(degree) * 1.8) + 32;
+    return(degree);
+}
+//let degree = prompts("give a celsius degree");
+//let degree;
+//celsiusToFahrenheit(0);
+
 module.exports = celsiusToFahrenheit;

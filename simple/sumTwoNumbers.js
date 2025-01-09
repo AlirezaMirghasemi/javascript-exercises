@@ -11,8 +11,7 @@
  */
 
 // Write your solution here
-function sum(a, b) {
-  return a + b;
-}
-
+let sum=(a,b)=>{
+return Number(a)+Number(b);
+};
 module.exports = sum;

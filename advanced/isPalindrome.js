@@ -11,5 +11,11 @@
  * isPalindrome(-121) should return false (negative numbers are not palindromes).
  * isPalindrome(10) should return false.
  */
-
+let isPalindrome = (num) => {
+  let stringNum = num.toString();
+  [...arrStringNum] = stringNum;
+  let reversedNum = [...arrStringNum].reverse().join("");
+  return stringNum == reversedNum ? true : false;
+};
+console.log(isPalindrome(-121)); // true
 module.exports = isPalindrome;

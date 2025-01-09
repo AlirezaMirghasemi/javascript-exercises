@@ -11,5 +11,12 @@
  */
 
 // Write your solution here
+reverseString = (str) => {
+  [...reversed] = str;
+  reversed = reversed.reverse().toString().split(",").join("");
+  //ask chatgpt for make it shorter.
+  //  return [...str].reverse().join('');
+  return reversed;
+};
 
 module.exports = reverseString;
