@@ -14,17 +14,8 @@
  */
 
 // Write your solution here
-let add = (a, b) => {
-    return a + b;
-  };
-  let subtract = (a, b) => {
-    return a - b;
-  };
-  let multiply = (a, b) => {
-    return a * b;
-  };
-  let divide = (a, b) => {
-    if (b === 0) return NaN;
-    return a / b;
-  };
+let add = (a, b) => a + b;
+  let subtract = (a, b) => a - b;
+  let multiply = (a, b) =>  a * b;
+  let divide = (a, b) => b===0 ? Nan : a/b;
 module.exports = { add, subtract, multiply, divide };
