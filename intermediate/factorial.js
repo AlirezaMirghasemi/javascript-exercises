@@ -11,12 +11,11 @@
  */
 
 // Write your solution here
-let factorial=(num)=>{
-    let factorial=1;
-    for (let index = 1; index <= num; ++index) {
-        factorial*=index;
-    }
-    return factorial;
+let factorial = (num) => {
+  let factorial = 1;
+  for (let i = 2; i <= num; i++) {
+    factorial *= i;
+  }
+  return factorial;
 };
-//console.log(factorial(0));
 module.exports = factorial;
