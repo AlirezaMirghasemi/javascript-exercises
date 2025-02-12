@@ -12,14 +12,11 @@
 
 // Write your solution here
 let fibonacci = (num) => {
-  let fib = [];
-  let last = 0;
-  if (num == 0) return [];
+  if (num <= 0) return [];
   if (num == 1) return [0];
-  if (num == 2) return [0,1];
-  fib.push(0, 1);
-  for (let index = 2; index < num; index++) {
-    fib.push(fib[index - 2] + fib[index - 1]);
+  let fib = [0,1];
+  for (let i = 2; i < num; i++) {
+    fib.push(fib[i - 2] + fib[i - 1]);
   }
   return fib;
 };
