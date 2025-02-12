@@ -29,5 +29,5 @@ let digitalClock = () => {
   let clockElement = document.getElementById("clock");
   clockElement.innerHTML = clock;
 };
-setInterval(() => digitalClock(), 1000);
+
 module.exports = digitalClock;

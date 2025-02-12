@@ -10,7 +10,7 @@
  * calculateAverage([10, 20, 30]) should return 20.
  */
 let calculateAverage = (arr) => {
-  if (arr.length === 0) return 0;
+  if (arr.length === 0) return NaN;
   let sum = arr.reduce((sum, cell) => sum + cell, 0);
   return sum / arr.length;
 };
