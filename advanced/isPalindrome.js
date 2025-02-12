@@ -17,5 +17,4 @@ let isPalindrome = (num) => {
   let reversedNum = [...arrStringNum].reverse().join("");
   return stringNum == reversedNum ? true : false;
 };
-console.log(isPalindrome(-121)); // true
 module.exports = isPalindrome;
