@@ -17,5 +17,4 @@ let sumOfDigits = (arr) => {
   }
   return sum;
 };
-Output: 6;
 module.exports = sumOfDigits;
