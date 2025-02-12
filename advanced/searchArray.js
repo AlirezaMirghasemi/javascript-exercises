@@ -10,8 +10,5 @@
  * searchArray([1, 2, 3, 4], 3) should return true.
  * searchArray([1, 2, 3, 4], 5) should return false.
  */
-let searchArray = (arr, search) => {
-  if (arr.includes(search)) return true;
-  return false;
-};
+let searchArray = (arr, search) =>  (arr.includes(search)) ? true : false;
 module.exports = searchArray;
