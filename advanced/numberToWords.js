@@ -51,64 +51,54 @@ let numberToWords = (number) => {
   let numberStr = number.toString();
   let numberLength = numberStr.length;
   let result = [];
-  switch (numberLength) {
-    case 1:
-      result = oneDigit(number);
-      return result.trim();
-      break;
-    case 2:
-      result = twoDigits(number);
-      return result.trim();
-      break;
-    case 3:
-      result = threeDigits(number);
-      return result.trim();
-      break;
-    case 4:
-      result =
-        oneDigit(Math.floor(number / 1000)) +
-        words[1000] +
-        threeDigits(number % 1000);
-      return result.trim();
-      break;
 
-    case 5:
-      result =
-        twoDigits(Math.floor(number / 1000)) +
-        words[1000] +
-        threeDigits(number % 1000);
-      return result.trim();
-      break;
-    case 6:
-      result =
-        threeDigits(Math.floor(number / 1000)) +
-        words[1000] +
-        threeDigits(number % 1000);
-      return result.trim();
-      break;
-    default:
-      break;
-  }
-
-  console.log(result);
-  function oneDigit(num) {
-    return words[num];
-  }
-  function twoDigits(num) {
+  const oneDigit = (num) => words[num];
+  const twoDigits = (num) => {
     let mod = num % 10;
     let division = Math.floor(num / 10);
     if (num < 20 || mod == 0) return oneDigit(num);
     else return oneDigit(division * 10) + oneDigit(mod);
-  }
-  function threeDigits(num) {
+  };
+  const threeDigits = (num) => {
     let mod = num % 100;
     let division = Math.floor(num / 100);
     if (num < 10) return oneDigit(num);
     if (num < 100) return twoDigits(num);
     if (mod == 0) return oneDigit(division) + words[100];
     return oneDigit(division) + words[100] + twoDigits(mod);
+  };
+
+  switch (numberLength) {
+    case 1:
+      result = oneDigit(number);
+      return result.trim();
+    case 2:
+      result = twoDigits(number);
+      return result.trim();
+    case 3:
+      result = threeDigits(number);
+      return result.trim();
+    case 4:
+      result =
+        oneDigit(Math.floor(number / 1000)) +
+        words[1000] +
+        threeDigits(number % 1000);
+      return result.trim();
+    case 5:
+      result =
+        twoDigits(Math.floor(number / 1000)) +
+        words[1000] +
+        threeDigits(number % 1000);
+      return result.trim();
+    case 6:
+      result =
+        threeDigits(Math.floor(number / 1000)) +
+        words[1000] +
+        threeDigits(number % 1000);
+      return result.trim();
+    default:
+      break;
   }
 };
 
-console.log(numberToWords(123)); // one hundred twenty three
 module.exports = numberToWords;
