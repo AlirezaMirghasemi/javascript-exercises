@@ -11,12 +11,5 @@
  */
 
 // Write your solution here
-let isEvenOrOdd = (number) => {
-  number = Number(number);
-  if (number % 2 == 0) {
-    return "Even";
-  } else {
-    return "Odd";
-  }
-};
+let isEvenOrOdd = (number) =>Number(number)%2===0 ? "Even" : "Odd";
 module.exports = isEvenOrOdd;
