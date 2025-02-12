@@ -14,14 +14,8 @@
 
 // Write your solution here
 let tasks = [];
-let addTask = (task) => {
-  tasks.push(task);
-};
-let removeTask = (task) => {
-tasks=tasks.filter((t)=>t!==task);
-}
+let addTask = (task) => tasks.push(task);
+let removeTask = (task) => (tasks = tasks.filter((t) => t !== task));
+let showTasks = () => tasks;
 
-let showTasks = () => {
-  return tasks;
-};
 module.exports = { addTask, removeTask, showTasks };
