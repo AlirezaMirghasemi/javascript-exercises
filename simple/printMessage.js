@@ -10,8 +10,5 @@
  */
 
 // Write your solution here
-let printMessage=(message)=>{
-    console.log(message);
-}
-
+let printMessage=(message)=>console.log(message);
 module.exports = printMessage;
