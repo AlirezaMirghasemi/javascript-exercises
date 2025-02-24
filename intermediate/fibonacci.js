@@ -11,13 +11,12 @@
  */
 
 // Write your solution here
-let fibonacci = (num) => {
-  if (num <= 0) return [];
-  if (num == 1) return [0];
-  let fib = [0,1];
-  for (let i = 2; i < num; i++) {
-    fib.push(fib[i - 2] + fib[i - 1]);
-  }
-  return fib;
+const fibonacci = n => {
+    let array = [], a = 0, b = 1;
+    for (let i = 0; i < n; i++) {
+        array.push(a);
+        [a, b] = [b, a + b];
+    }
+    return array;
 };
 module.exports = fibonacci;
